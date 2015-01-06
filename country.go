@@ -35,13 +35,13 @@ type Country struct {
 	ISO3166OneAlphaThree string
 	ISO3166OneNumeric    int
 
-	ISO3166OneEnglishShortNameGazetteerOrder     string
-	ISO3166OneEnglishShortNameReadingOrder       string
-	ISO3166OneEnglishRomanizedNameGazetteerOrder string
-	ISO3166OneEnglishRomanizedNameReadingOrder   string
-	ISO3166OneFrenchShortNameGazetteerOrder      string
-	ISO3166OneFrenchShortNameReadingOrder        string
-	ISO3166OneSpanishShortNameGazetteerOrder     string
+	ISO3166OneEnglishShortNameGazetteerOrder          string
+	ISO3166OneEnglishShortNameReadingOrder            string
+	ISO3166OneEnglishRomanizedShortNameGazetteerOrder string
+	ISO3166OneEnglishRomanizedShortNameReadingOrder   string
+	ISO3166OneFrenchShortNameGazetteerOrder           string
+	ISO3166OneFrenchShortNameReadingOrder             string
+	ISO3166OneSpanishShortNameGazetteerOrder          string
 
 	UNGEGNEnglishFormalName string
 	UNGEGNFrenchFormalName  string
