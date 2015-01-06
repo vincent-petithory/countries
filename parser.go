@@ -85,25 +85,26 @@ func main() {
 			ISO3166OneFrenchShortNameReadingOrder:        tr[8],
 			ISO3166OneSpanishShortNameGazetteerOrder:     tr[9],
 
-			UNGEGNEnglishFormalName:         tr[10],
-			UNGEGNFrenchFormalName:          tr[11],
-			UNGEGNSpanishFormalName:         tr[12],
-			UNGEGNRussianShortAndFormalName: tr[13],
-			UNGEGNLocalShortName:            tr[14],
-			UNGEGNLocalFormalName:           tr[15],
+			UNGEGNEnglishFormalName: tr[10],
+			UNGEGNFrenchFormalName:  tr[11],
+			UNGEGNSpanishFormalName: tr[12],
+			UNGEGNRussianShortName:  tr[13],
+			UNGEGNRussianFormalName: tr[14],
+			UNGEGNLocalShortName:    tr[15],
+			UNGEGNLocalFormalName:   tr[16],
 
-			BGNEnglishShortNameGazetteerOrder: tr[16],
-			BGNEnglishShortNameReadingOrder:   tr[17],
-			BGNEnglishLongName:                tr[18],
-			BGNLocalShortName:                 tr[19],
-			BGNLocalLongName:                  tr[20],
+			BGNEnglishShortNameGazetteerOrder: tr[17],
+			BGNEnglishShortNameReadingOrder:   tr[18],
+			BGNEnglishLongName:                tr[19],
+			BGNLocalShortName:                 tr[20],
+			BGNLocalLongName:                  tr[21],
 
-			PCGNEnglishShortNameGazetteerOrder: tr[21],
-			PCGNEnglishShortNameReadingOrder:   tr[22],
-			PCGNEnglishLongName:                tr[23],
+			PCGNEnglishShortNameGazetteerOrder: tr[22],
+			PCGNEnglishShortNameReadingOrder:   tr[23],
+			PCGNEnglishLongName:                tr[24],
 
-			FAOItalianLongName: tr[24],
-			FFOGermanShortName: tr[25],
+			FAOItalianLongName: tr[25],
+			FFOGermanShortName: tr[26],
 		}
 
 		allCountries = append(allCountries, country)

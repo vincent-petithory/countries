@@ -43,12 +43,13 @@ type Country struct {
 	ISO3166OneFrenchShortNameReadingOrder        string
 	ISO3166OneSpanishShortNameGazetteerOrder     string
 
-	UNGEGNEnglishFormalName         string
-	UNGEGNFrenchFormalName          string
-	UNGEGNSpanishFormalName         string
-	UNGEGNRussianShortAndFormalName string
-	UNGEGNLocalShortName            string
-	UNGEGNLocalFormalName           string
+	UNGEGNEnglishFormalName string
+	UNGEGNFrenchFormalName  string
+	UNGEGNSpanishFormalName string
+	UNGEGNRussianShortName  string
+	UNGEGNRussianFormalName string
+	UNGEGNLocalShortName    string
+	UNGEGNLocalFormalName   string
 
 	BGNEnglishShortNameGazetteerOrder string
 	BGNEnglishShortNameReadingOrder   string
