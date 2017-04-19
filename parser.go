@@ -18,9 +18,11 @@ import (
 	"github.com/vincent-petithory/countries"
 )
 
+var goPkg string
+
 func main() {
 	goFile := os.Getenv("GOFILE")
-	goPkg := os.Getenv("GOPACKAGE")
+	goPkg = os.Getenv("GOPACKAGE")
 	if goPkg == "" {
 		log.Fatal("GOPACKAGE env is empty")
 	}
@@ -143,7 +145,7 @@ func main() {
 }
 
 func countrySrc(country countries.Country) string {
-	src := strings.Replace(fmt.Sprintf("%#v", country), "countries.", "", 1)
+	src := strings.Replace(fmt.Sprintf("%#v", country), goPkg+".", "", 1)
 	return src
 }
 
