@@ -21,19 +21,12 @@ import (
 var goPkg string
 
 func main() {
-	goFile := os.Getenv("GOFILE")
 	goPkg = os.Getenv("GOPACKAGE")
 	if goPkg == "" {
 		log.Fatal("GOPACKAGE env is empty")
 	}
-	if goFile == "" {
-		log.Fatal("GOFILE env is empty")
-	}
-	flag.Parse()
-	if flag.NArg() < 1 {
-		flag.Usage()
-		os.Exit(1)
-	}
+
+	goFile := getFilename()
 
 	// Parse template for go source
 	t, err := template.New("_").Funcs(template.FuncMap{
@@ -44,7 +37,7 @@ func main() {
 	}
 
 	// Parse csv data
-	f, err := os.Open(flag.Arg(0))
+	f, err := os.Open(goFile)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -142,6 +135,20 @@ func main() {
 	if _, err = io.Copy(outf, bytes.NewReader(src)); err != nil {
 		log.Fatal(err)
 	}
+}
+
+func getFilename() string {
+	// Command line argument wins over environment variable.
+	flag.Parse()
+	if flag.NArg() > 1 {
+		return flag.Arg(0)
+	}
+
+	filename := os.Getenv("GOFILE")
+	if filename == "" {
+		log.Fatal("GOFILE env is empty and no file provided as command line argument")
+	}
+	return filename
 }
 
 func countrySrc(country countries.Country) string {
